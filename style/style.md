@@ -1,0 +1,36 @@
+
+# Table of Contents
+
+1.  [Theorem, Definitions, Proofs etc.](#org42b1ad2)
+
+
+
+<a id="org42b1ad2"></a>
+
+# Theorem, Definitions, Proofs etc.
+
+The list of possible environment keywords are as follows
+
+-   Definition: `definition`
+-   Theorem: `theorem`
+-   Proof: `proof`
+-   Lemma: `lemma`
+-   Example: `example`
+-   Proposition: `proposition`
+-   Claim: `claim`
+-   Note: `note`
+-   Observation: `observation`
+-   Tool: `tool`
+-   Fact: `fact`
+-   Idea: `idea`
+-   Corollary: `corollary`
+-   Question: `question`
+-   Remark: `remark`
+-   Notation: `notation`
+
+Such that our environment is declared as `\begin{<keyword>} \end{<keyword>}`. For example, a definition environment:
+
+    \begin{definition}
+    An ambigious definition.
+    \end{definition}
+

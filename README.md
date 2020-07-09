@@ -1,2 +1,2 @@
 # artem
-comprehensive notes from MATH1071
+Bleeding edge branch for MATH1071 analysis notes.
