@@ -1,0 +1,116 @@
+\lecture{22}
+\begin{theorem}[Rolle's Theorem]
+Suppose \(f:[a,b] \to \mathbb{R}\) is continuous on \([a,b]\), and differentiable on \((a,b)\). If \(f(a) = f(b)\), then \(\exists c \in (a,b)\) such that \(f'(c) = 0\)
+\begin{center}
+\begin{tikzpicture}[scale=1.5]
+% I have to remake this later.
+\node at (1.5,2)[circle,fill,inner sep=1pt]{};
+\node at (4.5,2)[circle,fill,inner sep=1pt]{};
+\draw[->] (-0.2,0) -- (6,0) node[right] {$x$}; % x-axis
+\draw[->] (0,-0.2) -- (0,4) node[above] {$f(x)$};
+\draw[dotted] (0,2) -- (6,2);
+\draw[dotted] (1.5,4) -- (1.5,0);
+\draw[dotted] (4.5,4) -- (4.5,0);
+
+% bad curve :(
+\draw[->] plot [smooth, tension=1] coordinates {(1.5,2) (1.9, 1.5) (2.42, 2.8) (2.85, 1.3) (3.4, 2.2) (3.9,1.49) (4.5,2)};
+\draw[-,red] (2,2.82) -- (2.8,2.82);
+\node at (2.4, 2.8)[circle,fill,inner sep=0.7pt]{};
+\draw[-,red] (3,2.22) -- (3.8,2.22);
+\node at(3.42, 2.21)[circle,fill,inner sep=0.7pt]{};
+\end{tikzpicture}
+\end{center}
+\end{theorem}
+\begin{proof}
+If \(f(x) = f(a) \; \forall x \in (a,b)\), then the theorem is obvious. Assume \(f\) is not constant, without loss of generality, assume \(\exists x_0 \in (a,b)\) such that \(f(x_0) > f(a)\). (If no such \(x_0\) exists then there exists some \(x_1 \in (a,b)\) such that \(f(x_1) < f(a)\); in this case, a similar argument works).
+\\\\ %par
+By the extreme value theorem, \(f\) has a global minimum on \([a,b]\), call it \(c\). Since \(f(c) \geq f(x_0) > f(a) = f(b)\), we have \(c \neq a, c \neq b\). Thus \(c\) lies within \((a,b)\) and \(f'(c) = 0\).
+\end{proof}
+
+\begin{theorem}[Mean Value Theorem]
+Suppose \(f:[a,b] \to \mathbb{R}\) is continuous on \([a,b]\), differentiable on \((a,b)\). Then \(\exists c \in (a,b)\) such that
+\[
+f'(c) = \frac{f(b) - f(a)}{b-a}
+\]
+\begin{center}
+\begin{tikzpicture}
+\draw[->] (-0.2,0) -- (10,0) node[right] {$x$}; % x-axis
+\draw[->] (0,-0.2) -- (0,4.3) node[above] {$f(x)$};
+
+\node (a) at (0.8,0.6)[circle,fill,inner sep=1pt]{};
+\node (a-onaxis) at (0.8,0)[circle,fill,inner sep=0.5pt]{};
+\node[below] at (a-onaxis) {$a$};
+\node (b) at (9.6, 3.7)[circle,fill,inner sep=1pt]{};
+\node (b-onaxis) at (9.6,0)[circle,fill,inner sep=0.5pt]{};
+\node[below] at (b-onaxis) {$b$};
+\node (fa) at (0,0.6)[circle,fill,inner sep=0.8pt]{};
+\node (ob) at (9.6,0.6)[circle,fill,inner sep=0.5pt]{};
+\node (fb) at (0, 3.7)[circle,fill,inner sep=0.8pt]{};
+\node[left] at (fb) {$f(b)$};
+\node[left] at (fa) {$f(a)$};
+\draw[-,red] (a) -- (b);
+\draw[dotted] (fa) -- (ob);
+\draw[dotted] (a) -- (a-onaxis);
+\draw[dotted] (b) -- (ob);
+\draw[dotted] (ob) -- (b-onaxis);
+\draw[dotted] (fb) -- (b);
+
+% time for the curvy part,
+% collection of nodes
+\node (c) at (1.7, 0.4)[circle,fill,inner sep=0.7pt]{};
+\node[right] at (c) {$c$};
+\node (peak) at (4.2, 3.9){};
+\node (final) at (8,3.18){};
+\draw plot [smooth, tension=0.7] coordinates {(a) (c) (peak) (final) (b)};
+
+\draw[dotted] (c) -- (1.7,0);
+\end{tikzpicture}
+\end{center}
+\end{theorem}
+
+\begin{proof}
+Consider the function
+\[
+\phi (x) = f(x) - f(a) - \frac{f(b) - f(a)}{b-a}\cdot (x-a)
+\]
+Observe that
+\begin{align*}
+\phi (a) &= f(a) - f(a) - \frac{f(b) - f(a)}{b-a}(a-a) \\
+         &= 0\\
+         \phi (b) &= f(b) - f(a) - \frac{f(b) - f(a)}{b-a}(b-a)\\
+         &= 0
+\end{align*}
+Applying Rolle's Theorem to \(\phi(x)\) we obtain the existence of \(c \in (a,b)\) such that
+\[
+\phi(c) = f'(c) - \frac{f(b) - f(a)}{b-a} = 0
+\]
+Which gives our result
+\[
+f'(c) = \frac{f(b)-f(a)}{b-a}
+\]
+\end{proof}
+\begin{example}[Applications of MVT]
+Assuming \(f:[a,b] \to \mathbb{R}\) is continuous on \([a,b]\) and differentiable on \((a,b)\)
+\begin{enumerate}
+\item If \(f'(x) = 0\) on \((a,b)\), then \(f\) is continuous on \([a,b]\), or rather \(f'(x) \iff f(x) = c\), where \(c\) is some constant value. Indeed take \(x \in [a,b]\), apply MVT on \([a,x]\) and we conclude that \(f(x) - f(a) = f'(c)(x-a)\) for some \(c \in [a,x]\). Therefore \(f(x) - f(a) = 0\), which gives \(f(x) = f(a)\)
+\end{enumerate}
+\end{example}
+\begin{theorem}[Properties]
+\begin{enumerate}
+\item If \(f' \geq 0\) on \((a,b)\), then \(f\) is monotone decreasing,
+\begin{proof}
+Take \(x,y \in [a,b]\) and assume \(x < y\). Need to prove that \(f(x) \leq f(y)\). Apply MVT on \([x,y]\). We need to find \(f(y) - f(x) = f'(c)(y-x)\), where both \(f'(c), (y-x) \geq 0\), for some \(c \in (x,y)\). By assumption, \(f'(c) \geq 0\). Therefore \(f(y) \geq f(x)\).
+\end{proof}
+
+\item if \(f' \leq 0\) on \((a,b)\), then \(f\) is non-zero.
+\begin{proof}
+Apply (a) to \(-f\)
+\end{proof}
+
+\item if \(f' > 0\), then \(f\) is strictly increasing.
+\item if \(f' < 0\), then \(f\) is strictly decreasing.
+\begin{proof}
+Both (c), (d), analagously proved.
+\end{proof}
+\end{enumerate}
+\end{theorem}

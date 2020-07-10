@@ -1,0 +1,11 @@
+#+TITLE: Guide
+@MATH1071 so I have created a somewhat formalised system to the document. It is up and runnning at https://github.com/koji314/artem. I believe the plan was to split up the work by lecture.
+
+The gist of it is essentially:
+*1.* Fork the notes
+*2.* Write your file in the ~lectures~ folder, just barebone, no need to add any preamble or declare document. (Think of it as just content pasted into the main file later on)
+
+   It's important that the filename follows the structure ~<lecture_number>-<title>.tex~,
+   for example ~15-Riemann_Integration.tex~.
+*3.* Submit a pull request to me through Github.
+*4.* :pog:?
