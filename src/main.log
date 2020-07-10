@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.4.22)  11 JUL 2020 00:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2020.4.22)  11 JUL 2020 00:26
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1124,11 +1124,7 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 5.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-
-LaTeX Warning: No \author given.
-
-[1
+) [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./main.toc)
 \tf@toc=\write7
@@ -1179,12 +1175,12 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 8.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 8.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 8.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 727CD89D4DAF05B35E1743F0701E6926;232.
+(rerunfilecheck)             Checksum: DDF47C7CAF2093B90887D5B784A2AAD9;276.
  ) 
 Here is how much of TeX's memory you used:
  31433 strings out of 492609
  605629 string characters out of 6131462
- 682354 words of memory out of 5000000
+ 682582 words of memory out of 5000000
  34918 multiletter control sequences out of 15000+600000
  542054 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1197,7 +1193,7 @@ ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf
 fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/t
 ype1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
 ublic/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (4 pages, 85801 bytes).
+Output written on main.pdf (4 pages, 85670 bytes).
 PDF statistics:
  89 PDF objects out of 1000 (max. 8388607)
  74 compressed objects within 1 object stream

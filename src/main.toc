@@ -1,4 +1,4 @@
-\contentsline {section}{\numberline {\hspace {5pt} 22.}Lecture}{2}{section.0.22}% 
+\contentsline {section}{\numberline {\hspace {5pt} 22.}Lecture 22 - Rolle's Theorem and Mean Value Theorem}{2}{section.0.22}% 
 \contentsline {subsection}{Rolle's Theorem}{2}{section*.2}% 
 \contentsline {subsection}{Mean Value Theorem}{2}{section*.3}% 
 \contentsline {subsection}{Properties}{3}{section*.4}% 

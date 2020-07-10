@@ -88,8 +88,8 @@
 
 %number less chapters
 \newcommand{\mychapter}[2]{
-    \setcounter{chapter}{#1}
-    \setcounter{section}{0}
+    %\setcounter{chapter}{#1}
+    %\setcounter{section}{0}
     \chapter*{#2}
     \addcontentsline{toc}{chapter}{#2}
 }
@@ -98,20 +98,19 @@
 
 
 % custom headings and things
-\newcommand{\lecture}[1]{
-    \setcounter{section}{#1 - 1}
-    \section{Lecture}
+\newcommand{\lecture}[2]{
+    \setcounter{section}{#1-1}
+    \section{Lecture #1 - #2}
 }
 
-\titleformat{\section}{\normalfont\Large\bfseries}{}{0em}{#1\thesection}
-
+%\titleformat{\section}{\normalfont\Large\bfseries}{}{0em}{#1\thesection}
+\titleformat{\section}{\normalfont\Large\bfseries}{}{0em}{#1}
 
 % environments
 \input{enviroments.tex}
 
-%shits gotta come last ffs
 \usepackage{hyperref}
-% \hypersetup{pdfauthor={Jake Moss}, pdfkeywords={s46409665 - jake.moss@uqconnect.edu.au}}
 
-\title{\textbf{MATH1071 - Advanced Calculus \& Linear Algebra I}}
-
+\title{\textbf{MATH1071\\Advanced Calculus \& Linear Algebra I}}
+\author{Taught by Artem Pulemetov}
+\date{}
