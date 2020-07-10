@@ -2,7 +2,7 @@
 dir="../lectures"
 rm main.tex
 echo '\\documentclass[12pt]{report}\n\\input{preamble.tex}\n\\begin{document}' >> main.tex
-echo '\\maketitle\n\\tableofcontents' >> main.tex
+echo '\\maketitle\n\\tableofcontents\n\\newpage' >> main.tex
 
 rm sorted_lecs
 ls $dir | grep '[0-9]' | sort -n >> sorted_lecs
